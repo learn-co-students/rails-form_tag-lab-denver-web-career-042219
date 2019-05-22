@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   resources :students, only: [:index, :new, :create]
   get '/students/:id', to: 'students#show', as: 'student'
   # get '/students/new', to: 'students#new', as: 'student'
+  resources :school_classes, only: [:new, :create, :show, :edit, :update]
 end
